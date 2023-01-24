@@ -39,8 +39,4 @@ public class PartTimeEmployee extends Employee{
         return hourlyRate * hoursPerWeek;
     }
 
-    @Override
-    public Date dueDate() {
-        return super.dueDate();
-    }
 }

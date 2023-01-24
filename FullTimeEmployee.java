@@ -21,9 +21,5 @@ public class FullTimeEmployee extends Employee {
     public double getAmount() {
         return salary;
     }
-
-    @Override
-    public Date dueDate() {
-        return super.dueDate();
-    }
 }
+

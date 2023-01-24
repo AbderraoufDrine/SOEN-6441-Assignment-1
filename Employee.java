@@ -25,8 +25,4 @@ public class Employee implements Paid{
         return 0;
     }
 
-    @Override
-    public Date dueDate() {
-        return null;
-    }
 }

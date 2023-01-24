@@ -32,8 +32,4 @@ public class Bill implements Paid{
         return amount;
     }
 
-    @Override
-    public Date dueDate() {
-        return null;
-    }
 }
