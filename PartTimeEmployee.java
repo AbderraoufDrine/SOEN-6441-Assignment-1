@@ -7,7 +7,7 @@ public class PartTimeEmployee extends Employee{
     private int echelon;
 
 
-    public PartTimeEmployee(String fName, String lName, int age, int hoursPerWeek, int echelon, double hourlyRate) {
+    public PartTimeEmployee(String fName, String lName, int age, int hoursPerWeek, int echelon) {
         super(fName, lName, age);
         this.hoursPerWeek = hoursPerWeek;
         this.echelon = echelon;
