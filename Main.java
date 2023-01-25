@@ -1,9 +1,3 @@
-//public class Main {
-//    public static void main(String[] args) {
-//        System.out.println("Hello world!");
-//    }
-//}
-
 import java.util.*;
 
 public class Main {
@@ -88,7 +82,7 @@ public class Main {
 	        		 {
 	        			 System.out.println();
 	        			 System.out.println("Cheque number:" + number);
-	        			 cheque.toString();
+						 System.out.println(cheque.toString());
 	        			 number++;
 	        		 }
 	        		 continue;
@@ -108,5 +102,5 @@ public class Main {
 
 
 //Hadi Ahmad 24 1000
-//Abed D 23 20 3
+//Abed Drine 23 20 3
 //Hydro Jan 31 2023 200

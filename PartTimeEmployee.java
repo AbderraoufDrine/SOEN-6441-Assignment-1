@@ -29,8 +29,8 @@ public class PartTimeEmployee extends Employee{
     public String toString() {
         System.out.println("Part Time Employee");
         System.out.println(super.toString());
-        return "salary=" + getAmount() +
-                '}';
+        System.out.println("salary= "+ getAmount());
+        return "";
 
     }
 

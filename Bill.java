@@ -8,7 +8,7 @@ public class Bill implements Paid{
     private int year;
     private double amount;
 
-    public Bill(String name, String month, int day, int year, int amount) {
+    public Bill(String name, String month, int day, int year, double amount) {
         this.name = name;
         this.month = month;
         this.day = day;

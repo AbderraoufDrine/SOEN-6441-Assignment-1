@@ -13,8 +13,8 @@ public class FullTimeEmployee extends Employee {
     public String toString() {
         System.out.println("Full Time Employee");
         System.out.println(super.toString());
-        return "salary=" + salary +
-                '}';
+        System.out.println("salary= "+ getAmount());
+        return "";
     }
 
     @Override
