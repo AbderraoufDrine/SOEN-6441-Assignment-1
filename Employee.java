@@ -14,9 +14,9 @@ public class Employee implements Paid{
 
     @Override
     public String toString() {
-        return "fName='" + fName + '\'' +
-                ", lName='" + lName + '\'' +
-                ", age=" + age +
+        return "First Name: '" + fName + '\'' +
+                ", Last Name: '" + lName + '\'' +
+                ", age: " + age +
                 '}';
     }
 
