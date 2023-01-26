@@ -28,51 +28,86 @@ public class Main {
 	             }
 	        	 if(input==1)
 	        	 {
-	 				 System.out.println("Enter employee info in this format (First name,last name,Age,Salary): ");
-					 String info = sc.nextLine();
-					 String[] s = info.split(" ");
-	        		 String first = s[0];
-	        		 String last = s[1];
-	        		 int age = Integer.parseInt(s[2]);
-	        		 double salary = Double.parseDouble(s[3]);
-	        		 FullTimeEmployee e = new FullTimeEmployee(first,last,age,salary);
-	        		 System.out.println("Adding Full time employee...");
-	        		 cheques.add(e);
-	        		 continue;
-	        		 
+					 boolean flag = true;
+					 while(flag) {
+						 System.out.println("Enter employee info in this format (FirstName LastName Age Salary): ");
+						 try {
+							 String info = sc.nextLine();
+							 String[] s = info.split(" ");
+							 if (s.length != 4)
+								 throw new RuntimeException();
+							 String first = s[0];
+							 String last = s[1];
+							 int age = Integer.parseInt(s[2]);
+							 double salary = Double.parseDouble(s[3]);
+							 FullTimeEmployee e = new FullTimeEmployee(first, last, age, salary);
+							 System.out.println("Adding Full time employee...");
+							 cheques.add(e);
+							 flag = false;
+						 } catch (RuntimeException e) {
+							 System.out.println("It seems you're input format is wrong please try again");
+							 System.out.println();
+							 flag = true;
+						 }
+					 }
+
 	        	 }
 	        	 if(input==2)
 	        	 {
-	 				 System.out.println("Enter employee info in this format (First name,last name,Age,Hours worked,Echelon): ");
-					 String info = sc.nextLine();
-					 String[] s = info.split(" ");
-	        		 String first = s[0];
-	        		 String last = s[1];
-	        		 int age = Integer.parseInt(s[2]);
-	        		 int hours = Integer.parseInt(s[3]);
-	        		 int echelon = Integer.parseInt(s[4]);
-	        		 PartTimeEmployee e = new PartTimeEmployee(first,last,age,hours,echelon);
-	        		 System.out.println("Adding Part time employee...");
-	        		 cheques.add(e);
-	        		 continue;
-	        		 
-	        	 }
+					 boolean flag = true;
+					 while(flag) {
+
+						 System.out.println("Enter employee info in this format (FirstName LastName Age HoursWorked Echelon): ");
+						 try {
+							 String info = sc.nextLine();
+							 String[] s = info.split(" ");
+							 if (s.length != 5)
+								 throw new RuntimeException();
+							 String first = s[0];
+							 String last = s[1];
+							 int age = Integer.parseInt(s[2]);
+							 int hours = Integer.parseInt(s[3]);
+							 int echelon = Integer.parseInt(s[4]);
+							 PartTimeEmployee e = new PartTimeEmployee(first, last, age, hours, echelon);
+							 System.out.println("Adding Part time employee...");
+							 cheques.add(e);
+							 flag = false;
+						 } catch (RuntimeException e) {
+							 System.out.println("It seems you're input format is wrong please try again");
+							 System.out.println();
+							 flag = true;
+						 }
+					 }
+
+
+				 }
 	        	 else if(input==3)
 	        	 {
-	 				 System.out.println("Enter Bill info in this format (Name,Month,Day,Year,Amount): ");
-					 String info = sc.nextLine();
-					 String[] s = info.split(" ");
-	        		 String name = s[0];
-	        		 String month = s[1];
-	        		 int day = Integer.parseInt(s[2]);
-	        		 int year = Integer.parseInt(s[3]);
-	        		 int amount = Integer.parseInt(s[4]);
-	        		 Bill b = new Bill(name,month, day, year, amount);
-	        		 System.out.println("Adding Bill...");
-	        		 cheques.add(b);
-	        		 b.toString();
-	        		 continue;
-	        		 
+					 boolean flag = true;
+					 while(flag) {
+						 System.out.println("Enter Bill info in this format (Name Month Day Year Amount): ");
+						 try {
+							 String info = sc.nextLine();
+							 String[] s = info.split(" ");
+							 if (s.length != 5)
+								 throw new RuntimeException();
+							 String name = s[0];
+							 String month = s[1];
+							 int day = Integer.parseInt(s[2]);
+							 int year = Integer.parseInt(s[3]);
+							 int amount = Integer.parseInt(s[4]);
+							 Bill b = new Bill(name, month, day, year, amount);
+							 System.out.println("Adding Bill...");
+							 cheques.add(b);
+							 flag = false;
+						 }
+						 catch (RuntimeException e) {
+							 System.out.println("It seems you're input format is wrong please try again");
+							 System.out.println();
+							 flag = true;
+						 }
+					 }
+
 	        	 }
 	        	 else if(input==4)
 	        	 {
@@ -85,13 +120,12 @@ public class Main {
 						 System.out.println(cheque.toString());
 	        			 number++;
 	        		 }
-	        		 continue;
+
 	        		 
 	        	 }
 	        	 else if(input==5)
 	        	 {
 	        		 System.out.println("Thank you for using the system!");
-	        		 goToMainMenu = false;
 	        		 sc.close();
 	        		 break;
 	        	 }
