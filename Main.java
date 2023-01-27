@@ -35,7 +35,7 @@ public class Main {
 							 String info = sc.nextLine();
 							 String[] s = info.split(" ");
 							 if (s.length != 4)
-								 throw new RuntimeException();
+								 throw new InputMismatchException();
 							 String first = s[0];
 							 String last = s[1];
 							 int age = Integer.parseInt(s[2]);
@@ -44,11 +44,17 @@ public class Main {
 							 System.out.println("Adding Full time employee...");
 							 cheques.add(e);
 							 flag = false;
-						 } catch (RuntimeException e) {
+						 } catch (InputMismatchException e) {
 							 System.out.println("It seems you're input format is wrong please try again");
 							 System.out.println();
 							 flag = true;
 						 }
+						 catch (NumberFormatException e) {
+							 System.out.println("It seems you're input format is wrong please try again");
+							 System.out.println();
+							 flag = true;
+						 }
+
 					 }
 
 	        	 }
@@ -62,7 +68,7 @@ public class Main {
 							 String info = sc.nextLine();
 							 String[] s = info.split(" ");
 							 if (s.length != 5)
-								 throw new RuntimeException();
+								 throw new InputMismatchException();
 							 String first = s[0];
 							 String last = s[1];
 							 int age = Integer.parseInt(s[2]);
@@ -72,7 +78,12 @@ public class Main {
 							 System.out.println("Adding Part time employee...");
 							 cheques.add(e);
 							 flag = false;
-						 } catch (RuntimeException e) {
+						 } catch (InputMismatchException e) {
+							 System.out.println("It seems you're input format is wrong please try again");
+							 System.out.println();
+							 flag = true;
+						 }
+						 catch (NumberFormatException e) {
 							 System.out.println("It seems you're input format is wrong please try again");
 							 System.out.println();
 							 flag = true;
@@ -90,7 +101,7 @@ public class Main {
 							 String info = sc.nextLine();
 							 String[] s = info.split(" ");
 							 if (s.length != 5)
-								 throw new RuntimeException();
+								 throw new InputMismatchException();
 							 String name = s[0];
 							 String month = s[1];
 							 int day = Integer.parseInt(s[2]);
@@ -101,7 +112,12 @@ public class Main {
 							 cheques.add(b);
 							 flag = false;
 						 }
-						 catch (RuntimeException e) {
+						 catch (InputMismatchException e) {
+							 System.out.println("It seems you're input format is wrong please try again");
+							 System.out.println();
+							 flag = true;
+						 }
+						 catch (NumberFormatException e) {
 							 System.out.println("It seems you're input format is wrong please try again");
 							 System.out.println();
 							 flag = true;
