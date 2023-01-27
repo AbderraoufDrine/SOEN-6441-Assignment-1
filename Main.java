@@ -9,6 +9,7 @@ public class Main {
 			System.out.println("Hello, welcome to Accounting System");
 	        System.out.println("------------------------------------------------------------");
 	        boolean goToMainMenu = true;
+			int number = 1; //cheque number
 	        ArrayList<Paid> cheques = new ArrayList<Paid>();
 	        while(goToMainMenu)
 	        {
@@ -128,12 +129,16 @@ public class Main {
 	        	 else if(input==4)
 	        	 {
 	        		 System.out.println("Issueing cheques:");
-	        		 int number = 1; //cheque number
-	        		 for(Paid cheque:cheques)
+					 if((number-1)==cheques.size())
+					 {
+						 System.out.println();
+						 System.out.println("No Cheques to issue");
+					 }
+	        		 for(int i = number -1; i<cheques.size();i++)
 	        		 {
 	        			 System.out.println();
 	        			 System.out.println("Cheque number:" + number);
-						 System.out.println(cheque.toString());
+						 System.out.println(cheques.get(i).toString());
 	        			 number++;
 	        		 }
 
